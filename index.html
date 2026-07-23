@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Cliente</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/src/cliente.js" type="module" defer></script>
+</head>
+<body>
+    <main id="cadastro">
+        <section id="formulario">
+                
+            <div id="cabecalho">
+                <i class="fa-regular fa-user"></i>  
+                <h1>Cadastro de Cliente</h1>
+                <p>Preencha os dados abaixo para criar sua conta</p>
+            </div>
+        
+        <hr>
+        <form id="formDados">
+            <section id="dadosPessoais" class="campo">
+            <h2>Dados Pessoais</h2>
+            
+            <div class="grupo">
+                <div class="campo">
+                    <label class="obrigatorio">Nome completo</label>
+                    <input type="text" name="dadoNome" id="dadoNome" class="inputNomeCpf" placeholder="digite seu nome" required>
+                </div>
+            
+
+                <div class="campo">
+                    <label for="cpf" class="obrigatorio">CPF</label>
+                    <input type="text" name="dadoCpf" id="dadoCpf" class="inputNomeCpf" required>
+                </div>    
+            </div>
+
+            <div class="grupo">
+                <div class="campo" >
+                    <label for="email" class="obrigatorio">E-mail</label>
+                    <input type="email" name="dadoEmail" id="dadoEmail" placeholder="seuemail@email.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone" class="obrigatorio" >Telefone</label>
+                    <input type="tel" name="dadoTelefone" id="dadoTelefone" placeholder="(79) 99999 - 9999" required> 
+                </div>
+            </div>
+            
+            <div class="grupo">
+                <div class="campo">
+                     <label for="dataNascimento" class="obrigatorio">Data de Nascimento</label>
+            <input type="date" name="dadoNascimento" id="dadoNascimento" placeholder="dd/mm/aaaa">
+                </div>
+            </div>
+                  
+
+            </section>
+
+            <section id="endereco">
+                    <h2>Endereço</h2>
+
+                    <div class="grupo">
+                        <div class="campo">
+                            <label for="cep" class="obrigatorio">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                        </div>
+                
+                        <div class="campo">
+                            <button type="button" id="btnBuscarCep" class="botao" > <i class="fa-solid fa-magnifying-glass"></i> Buscar CEP</button>
+                        </div>
+                    </div>
+    
+                    <div class="grupo">
+                        <div class="campo">
+                            <label for="">Rua</label>
+                            <input type="text" id="logradouro" name="logradouro" placeholder="Digite sua rua">
+                        </div>
+                        <div class="campo">
+                            <label for="">Número</label>
+                            <input type="number" name="numero" id="numero" placeholder="Digite seu número">
+                        </div>
+                
+                    </div>
+            
+                <label for="">Bairro</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro">
+
+                <label for="">Cidade</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
+
+                <label for="">Estado</label>
+                <select name="estado" id="estado" class="estado">
+                    <option value="Al">Alagoas</option>
+                    <option value="Ba">Bahia</option>
+                    <option value="Pe">Pernambuco</option>
+                    <option value="Pb">Paraíba</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="Ce">Ceará</option>
+                    <option value="Pi">Piauí</option>
+                    <option value="Ma">Maranhão</option>
+                    <option value="Se">Sergipe</option>
+                </select>
+                </section>
+
+                <section id="senha">
+                <h2>Criar senha</h2>
+                    <label for="">Senha</label>
+                    <input id="senha" type="password" minlength="6" placeholder="Mínimo 6 digitos">
+            
+                </section>
+                    <button type="submit" class="botao">Cadastrar</button>
+            </form>
+
+            <section id="listaClientes">
+                <h2>Clientes Cadastrados</h2>
+
+                <div id="clientes">
+
+                </div>
+            </section>
+
+        </section>
+    </main>
+</body>
+</html>
